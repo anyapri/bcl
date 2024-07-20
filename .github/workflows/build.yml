@@ -1,7 +1,7 @@
 name: Build and deploy
 on: workflow_dispatch
 jobs:
-  load secrets:
+  load-secrets:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
