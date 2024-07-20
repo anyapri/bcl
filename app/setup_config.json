@@ -1,0 +1,5 @@
+{
+     "model_name":"bert-hotels",
+     "max_length":"512",
+     "num_labels":"38"
+}
