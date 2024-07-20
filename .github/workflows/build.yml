@@ -1,5 +1,5 @@
 name: Build and deploy
-on: dispatch_workflow
+on: workflow_dispatch
 jobs:
   load secrets:
     runs-on: ubuntu-latest
