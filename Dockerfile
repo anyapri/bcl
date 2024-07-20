@@ -4,7 +4,13 @@ COPY requirements.txt requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
+ARG AWS_ACCESS_KEY_ID
+ARG AWS_SECRET_ACCESS_KEY
+
 COPY . .
 
-CMD ["torchserve", "--start", "--model-store", "app/model_store", "--models", "bert_content_processing.mar", "--ts-config", "app/config.properties", "--foreground"]
+USER root 
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ./entrypoint.sh
 
